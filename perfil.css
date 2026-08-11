@@ -1,0 +1,185 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+/* Sidebar / Card Perfil */
+.profile-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.profile-card {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    border: 3px solid var(--primary-color);
+}
+
+.user-info h2 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.team-info {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.online {
+    color: var(--online-color);
+}
+
+.status.offline {
+    color: var(--offline-color);
+}
+
+/* Botões do Perfil */
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Contas em outras Plataformas */
+.platform-links {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.platform-links h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.platform-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.platform-links a {
+    display: block;
+    padding: 10px;
+    background-color: #2A2A2A;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s;
+    color: var(--text-color);
+}
+
+.platform-links a:hover {
+    background-color: #333;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Main Content - Lista de Amigos */
+.profile-content {
+    flex-grow: 1;
+}
+
+.friends-section {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.friends-section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.friends-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-search {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #2A2A2A;
+    color: var(--text-color);
+}
+
+.input-search:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.friends-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.friend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2A2A2A;
+    border-radius: 8px;
+}
+
+.friend-item.blocked {
+    opacity: 0.6;
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.friend-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.friend-actions {
+    display: flex;
+    gap: 10px;
+}

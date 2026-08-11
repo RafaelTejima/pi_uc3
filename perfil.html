@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário - CS2 E-Sports</title>
+    <!-- CSS Geral e Específico da página -->
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Esquerda: Avatar e Informações do Card -->
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <div class="avatar-placeholder">Foto</div>
+                </div>
+                <div class="user-info">
+                    <h2>Nome do Jogador</h2>
+                    <p class="team-info">Time Afiliado: <strong>MIBR</strong></p>
+                    <p class="status online">Status: Online</p>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="profile-buttons">
+                <a href="#detalhes-conta" class="btn btn-primary">Detalhes da Conta</a>
+                <a href="#" class="btn btn-danger" onclick="if(confirm('Tem certeza que deseja sair?')) alert('Sessão encerrada!'); return false;">Logout</a>
+            </div>
+
+            <!-- Contas de outras plataformas -->
+            <div class="platform-links">
+                <h3>Plataformas</h3>
+                <ul>
+                    <li><a href="#" class="platform-discord">Discord</a></li>
+                    <li><a href="#" class="platform-steam">Steam</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal: Detalhes da conta e Lista de Amigos -->
+        <main class="profile-content">
+            <section id="detalhes-conta" class="friends-section">
+                <h2>Lista de Amigos</h2>
+                
+                <div class="friends-actions">
+                    <input type="text" placeholder="Buscar / Adicionar amigo..." class="input-search">
+                    <button class="btn btn-secondary">Adicionar</button>
+                </div>
+                
+                <ul class="friends-list">
+                    <li class="friend-item">
+                        <div class="friend-info">
+                            <div class="friend-avatar">G</div>
+                            <span>Gaulês</span>
+                        </div>
+                        <div class="friend-actions">
+                            <button class="btn btn-small btn-secondary">Remover</button>
+                            <button class="btn btn-small btn-danger">Bloquear</button>
+                        </div>
+                    </li>
+                    <li class="friend-item">
+                        <div class="friend-info">
+                            <div class="friend-avatar">F</div>
+                            <span>FalleN</span>
+                        </div>
+                        <div class="friend-actions">
+                            <button class="btn btn-small btn-secondary">Remover</button>
+                            <button class="btn btn-small btn-danger">Bloquear</button>
+                        </div>
+                    </li>
+                    <li class="friend-item blocked">
+                        <div class="friend-info">
+                            <div class="friend-avatar">U</div>
+                            <span>Usuário Tóxico (Bloqueado)</span>
+                        </div>
+                        <div class="friend-actions">
+                            <button class="btn btn-small btn-secondary">Desbloquear</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
