@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+}
+
+/* Cabeçalho Fixo */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(18, 13, 33, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo { 
+    font-weight: 800; 
+    font-size: 20px; 
+}
+
+.roxo { 
+    color: #9d4edd; 
+}
+
+.links { 
+    display: flex; 
+    gap: 30px; 
+}
+
+.links a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #9d4edd;
+}
+
+.user-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.botao-login {
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #9d4edd;
+    padding: 8px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #9d4edd;
+}
+
+.botao-cadastrar {
+    background-color: #9d4edd;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-cadastrar:hover {
+    background-color: #7b2cbf;
+}
+
+/* Hero & Carrossel de Fundo */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+/* Tempo de transição do carrossel */
+.carousel img:nth-child(1) { animation-delay: 0s; }
+.carousel img:nth-child(2) { animation-delay: 5s; }
+.carousel img:nth-child(3) { animation-delay: 10s; }
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Efeito de Degradê Escuro por Cima das Imagens */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: -1;
+}
+
+/* Conteúdo e Animação de Texto */
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo { 
+    font-size: 50px; 
+    margin-bottom: 10px; 
+    letter-spacing: 1px;
+}
+
+.subtitulo { 
+    color: #c7c7c7; 
+    font-size: 18px;
+    margin-bottom: 30px; 
+}
+
+.botao {
+    background-color: #9d4edd;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover { 
+    background-color: #7b2cbf; 
+    transform: translateY(-2px);
+}
+
+/* Seção de Informações / Cards Abaixo */
+.sobre-site {
+    padding: 80px 50px;
+    background-color: #05040a;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card-info {
+    background: #120d21;
+    border: 1px solid #2d1b4e;
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-info:hover {
+    transform: translateY(-8px);
+    border-color: #9d4edd;
+}
+
+.icone-card {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.card-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #a8a8a8;
+    line-height: 1.6;
+}
