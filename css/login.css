@@ -1,0 +1,188 @@
+/* ============================================================
+   LOGIN.CSS — Estilos específicos da página de login
+   ============================================================ */
+
+/* --- Fundo com Carousel (CSS-only via animation) --- */
+.carousel-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.carousel-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 13, 18, 0.72) 0%,
+    rgba(114, 62, 195, 0.18) 50%,
+    rgba(13, 13, 18, 0.78) 100%
+  );
+  z-index: 1;
+}
+
+/* Cada slide — ordem inversa para variar o visual */
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: carouselFade 20s infinite;
+}
+
+.carousel-slide:nth-child(1) {
+  background-image: url('../imagens/carousel_3.png');
+  animation-delay: 0s;
+}
+.carousel-slide:nth-child(2) {
+  background-image: url('../imagens/carousel_4.png');
+  animation-delay: 5s;
+}
+.carousel-slide:nth-child(3) {
+  background-image: url('../imagens/carousel_1.png');
+  animation-delay: 10s;
+}
+.carousel-slide:nth-child(4) {
+  background-image: url('../imagens/carousel_2.png');
+  animation-delay: 15s;
+}
+
+@keyframes carouselFade {
+  0%       { opacity: 0; }
+  5%       { opacity: 1; }
+  25%      { opacity: 1; }
+  30%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+/* --- Wrapper de página --- */
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* --- Card do formulário --- */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(114, 62, 195, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px 38px;
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  animation: cardSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- Cabeçalho do card --- */
+.card-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.card-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.card-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px var(--color-primary-glow);
+}
+
+.card-logo-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.card-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.card-logo-text span {
+  color: var(--color-primary-light);
+}
+
+.card-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Formulário --- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Divisor decorativo */
+.form-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  margin: 2px 0;
+}
+
+/* Botão de submit */
+.auth-form .btn-primary {
+  margin-top: 4px;
+}
+
+/* Texto de redirecionamento */
+.auth-form .redirect-text {
+  margin-top: 2px;
+}
+
+/* --- Esqueceu a senha --- */
+.forgot-password {
+  text-align: right;
+  font-size: 0.82rem;
+}
+
+.forgot-password a {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.forgot-password a:hover {
+  color: var(--color-primary-light);
+}
