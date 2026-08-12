@@ -17,6 +17,8 @@ Grupo Roxo
 ## Divisão de Tarefas
 
 - Rafael: Cadastro, login, Brackets
+- Rafael: Cadastro, login, Brackets, Seleção de mapas
 - Fellipe: Página de criação de torneio
 - Gabriel: Página inicial
+- Gabriel: Página inicial, Regras, FAQ
 - Marianne: Perfil do usuário
