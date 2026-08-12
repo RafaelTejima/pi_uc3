@@ -1,3 +1,11 @@
+body {
+    margin-top: 110px;
+    font-family: 'Manrope', Arial, sans-serif;
+    background-color: var(--fundo);
+    color: white;
+    overflow-x: hidden;
+}
+
 :root {
   --card-bg: rgba(20, 20, 30, 0.94);
   --card-border: rgba(114, 62, 195, 0.35);

@@ -10,25 +10,28 @@
   />
   <meta name="theme-color" content="#723EC3" />
 
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/torneios.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/torneios.css" />
+  <link rel="stylesheet" href="./index.css">
+
 </head>
 <body>
   <div class="ambient-shape shape-a" aria-hidden="true"></div>
   <div class="ambient-shape shape-b" aria-hidden="true"></div>
 
-  <header class="topbar" aria-label="Navegação principal">
-    <div class="logo-placeholder" aria-label="Logo da plataforma">CS2</div>
-
-    <nav class="main-nav" aria-label="Menu principal">
-      <a href="#">Inicio</a>
-      <a href="#" class="active">Torneios</a>
-      <a href="#">Ranking</a>
-      <a href="#">Perfil</a>
-    </nav>
-
-    <div class="topbar-spacer" aria-hidden="true"></div>
-  </header>
+    <header class="cabecalho">
+        <div class="logo">CS:GO <span class="roxo">TOURNAMENTS</span></div>
+        <nav class="links">
+            <a href="index.html" class="ativo">Início</a>
+            <a href="#">Torneios</a>
+            <a href="regras.html">Regras</a>
+            <a href="#">FAQ</a>
+        </nav>
+        <div class="user-area">
+            <a href="login.html" class="botao-login">Entrar</a>
+            <a href="cadastro.html" class="botao-cadastrar">Cadastrar</a>
+        </div>
+    </header>
 
   <main class="page-shell">
     <section class="hero-header" aria-labelledby="titulo-torneios">
