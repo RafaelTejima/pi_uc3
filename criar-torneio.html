@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Criar Torneio - CS2 Bracket | Plataforma de E-Sports</title>
+  <meta
+    name="description"
+    content="Crie torneios de CS2 com data, horario, regras e premiacao na plataforma CS2 Bracket."
+  />
+  <meta name="theme-color" content="#723EC3" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/criar-torneio.css" />
+</head>
+<body>
+  <div class="ambient-shape shape-a" aria-hidden="true"></div>
+  <div class="ambient-shape shape-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#" class="logo-placeholder" aria-label="Logo da plataforma">LOGO</a>
+
+    <nav class="main-nav" aria-label="Navegacao principal">
+      <a href="#" class="active">Criar torneio</a>
+      <a href="#">Ranking</a>
+      <a href="#">Minha conta</a>
+      <a href="#">Sair</a>
+    </nav>
+
+    <div class="topbar-spacer" aria-hidden="true"></div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="tournament-card" role="main" aria-labelledby="titulo-criacao">
+      <header class="card-header">
+        <p class="eyebrow">Painel de organizacao</p>
+        <h1 id="titulo-criacao">Criacao de torneio</h1>
+        <p class="subtitle">Defina os detalhes, registre as regras e publique sua proxima disputa.</p>
+      </header>
+
+      <form class="tournament-form" method="post" action="#">
+        <div class="form-group">
+          <label for="nome-torneio">Nome do torneio</label>
+          <input
+            type="text"
+            id="nome-torneio"
+            name="nome_torneio"
+            placeholder="Ex: Arena Noturna #12"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="data-torneio">Data do torneio</label>
+          <input
+            type="date"
+            id="data-torneio"
+            name="data_torneio"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="horario-torneio">Horario do torneio</label>
+          <input
+            type="time"
+            id="horario-torneio"
+            name="horario_torneio"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="premiacao">Valor do premio</label>
+          <div class="money-input-wrap">
+            <span aria-hidden="true">R$</span>
+            <input
+              type="number"
+              id="premiacao"
+              name="premiacao"
+              placeholder="0,00"
+              min="0"
+              step="0.01"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group form-rules">
+          <label for="regras-torneio">Regras do torneio</label>
+
+          <details class="rules-dropdown" open>
+            <summary>Abra para escrever as regras (obrigatorio)</summary>
+            <textarea
+              id="regras-torneio"
+              name="regras_torneio"
+              placeholder="Exemplo: formato MD3, mapa ban/pick, horario limite de check-in, penalidades e condicoes de W.O."
+              required
+              minlength="20"
+            ></textarea>
+          </details>
+
+          <p class="rules-note">O formulario so pode ser enviado apos preencher as regras.</p>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar torneio</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
