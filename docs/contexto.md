@@ -1,5 +1,6 @@
 # Website - Plataforma de E-Sports focada na organização de campeonatos com sistema de Bracket
 Este é um site focado na organização de campeonatos de e-sports, principalmente do jogo Counter Strike 2 (CS2). Acompanha sistema de login/cadastro, criação de torneios com sistema de bracket, página do usuário e página inicial.
+Este é um site focado na organização de campeonatos de e-sports de times, principalmente do jogo Counter Strike 2 (CS2). Acompanha sistema de login/cadastro, criação de torneios com sistema de bracket, página do usuário e página inicial. Não necessariamente nessa ordem. 
 
 ## Preferências
 - O site precisa ser em tema escuro
