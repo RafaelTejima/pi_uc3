@@ -7,6 +7,7 @@ Este é um site focado na organização de campeonatos de e-sports de times, pri
 - A cor principal do site deve ser roxo (#723EC3)
 - Não gere nenhuma imagem neste projeto.
 - O site deve ser responsivo
+- **NÃO USE EMOJIS**
 
 ## Tecnologias
 Use estritamente as tecnologias citadas abaixo:
