@@ -14,12 +14,6 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(13, 13, 18, 0.72) 0%,
-    rgba(114, 62, 195, 0.18) 50%,
-    rgba(13, 13, 18, 0.78) 100%
-  );
   background: rgba(0, 0, 0, 0.62);
   z-index: 1;
 }
@@ -33,6 +27,7 @@
   opacity: 0;
   animation: carouselFade 20s infinite;
 }
+
 
 .carousel-slide:nth-child(1) {
   background-image: url('../imagens/carousel_1.png');

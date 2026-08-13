@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Esqueci minha senha — CS2 Bracket | Plataforma de E-Sports</title>
-  <meta name="description" content="Recupere o acesso à sua conta na plataforma CS2 Bracket. Informe seu e-mail ou nome de usuário para receber as instruções de redefinição de senha." />
+  <title>Login — CS2 Bracket | Plataforma de E-Sports</title>
+  <meta name="description" content="Acesse sua conta na maior plataforma de campeonatos de CS2. Entre na arena e gerencie seus torneios com sistema de bracket." />
   <meta name="theme-color" content="#723EC3" />
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/esqueci-minha-senha.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/login.css" />
 </head>
 <body>
 
@@ -30,35 +30,24 @@
        CONTEÚDO PRINCIPAL
   ======================================================= -->
   <main class="page-wrapper">
-    <article class="auth-card" role="main" aria-labelledby="recuperacao-titulo">
+    <article class="auth-card" role="main" aria-labelledby="login-titulo">
 
       <!-- Logo / Identidade -->
       <header class="card-header">
         <div class="card-logo">
           <div class="card-logo-icon" aria-hidden="true">
-            <!-- Ícone de troféu / bracket -->
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 5h-2V3H7v2H5C3.9 5 3 5.9 3 7v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V18H9v2h6v-2h-2v-2.1a5.01 5.01 0 0 0 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zm-2 3c0 1.65-1.35 3-3 3s-3-1.35-3-3V5h6v3zM5 8V7h2v3.87A3.005 3.005 0 0 1 5 8zm14 0c0 1.47-1.05 2.7-2.45 2.97L16 10.87V7h2l.01 1z"/>
             </svg>
           </div>
           <span class="card-logo-text">CS2<span>Bracket</span></span>
         </div>
-
-        <!-- Ícone de cadeado decorativo -->
-        <div class="card-lock-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-          </svg>
-        </div>
-
-        <h1 class="card-title" id="recuperacao-titulo">Esqueci minha senha</h1>
-        <p class="card-subtitle">
-          Informe seu e-mail ou nome de usuário e enviaremos as instruções para redefinir sua senha.
-        </p>
+        <h1 class="card-title" id="login-titulo">Bem-vindo de volta</h1>
+        <p class="card-subtitle">Entre na arena e retome seu posto.</p>
       </header>
 
-      <!-- Formulário de Recuperação de Senha -->
-      <form class="auth-form" id="form-recuperacao" method="post" action="#" novalidate>
+      <!-- Formulário de Login -->
+      <form class="auth-form" id="form-login" method="post" action="#" novalidate>
 
         <!-- E-mail ou Nome de Usuário -->
         <div class="form-group">
@@ -73,16 +62,33 @@
           />
         </div>
 
+        <!-- Senha -->
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Sua senha"
+            autocomplete="current-password"
+            required
+          />
+          <div class="forgot-password">
+            <a href="esqueci-minha-senha.html" id="link-esqueceu-senha">Esqueceu a senha?</a>
+          </div>
+        </div>
+
         <div class="form-divider" aria-hidden="true"></div>
 
-        <!-- Botão de envio -->
-        <button type="submit" class="btn-primary" id="btn-recuperar">
-          Enviar instruções
+        <!-- Botão de Login -->
+        <button type="submit" class="btn-primary" id="btn-entrar">
+          Entrar na arena
         </button>
 
-        <!-- Redirecionamento para Login -->
+        <!-- Redirecionamento para Cadastro -->
         <p class="redirect-text">
-          <a href="login.html" id="link-voltar-login">Voltar para login</a>
+          Não tem uma conta?
+          <a href="cadastro.html" id="link-ir-cadastro">Cadastre-se</a>
         </p>
 
       </form>
