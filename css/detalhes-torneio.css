@@ -25,6 +25,7 @@ body {
 }
 
 .panel-header {
+  text-align: center;
   margin-bottom: 24px;
 }
 
@@ -34,7 +35,8 @@ body {
 }
 
 .detail-grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   margin-bottom: 28px;
